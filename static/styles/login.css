@@ -1,0 +1,89 @@
+.page{
+    color: #F1EBBB;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    height: 100%;
+}
+
+.page a{
+    color: #F1ebbb;
+    text-decoration: none;
+}
+
+.page a:hover{
+    color: darksalmon;
+}
+
+.login {
+    border-radius: 18px;
+    padding: 3rem;
+    text-align: left;
+    margin-left: 30%;
+    margin-right: 30%;
+    background-color: #393E46;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+.logo{
+    text-align: center;
+    border-radius: 18px;
+    width: 100%;
+}
+
+.tex{
+    display: block;
+    padding-top: 20px;
+}
+
+.place{
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    border: 1px solid #00adb5;
+    border-radius: 3px;
+    outline: none;
+    color: #F1EBBB;
+    background: transparent;
+    display: block;
+    box-sizing: border-box;
+    padding: 1rem;
+    margin-right: 25%;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.log{
+    text-align: center;
+    color: #F1EBBB;
+    border-radius: 3px;
+    border-color: #00ADB5;
+    background-color: #00ADB5;
+    display: block;
+    padding: 0.5rem;
+    margin-top: 20px;
+    width: 150px;
+}
+
+.tx{
+    text-align: center;
+}
+
+
+.reg{
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    border: 1px solid #00adb5;
+    border-radius: 3px;
+    outline: none;
+    color: #F1EBBB;
+    background: transparent;
+    display: block;
+    box-sizing: border-box;
+    padding: 1rem;
+    margin-right: 25%;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.helptext{
+    display: block;
+    padding: 10px;
+}

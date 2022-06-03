@@ -1,0 +1,35 @@
+.im{
+    width: 90px;
+    height: 90px;
+}
+
+.cont{
+    height: 130px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    background-color: #00ADB5;
+}
+
+.cont a{
+    text-decoration: none;
+    color: #707070;
+}
+
+.cont a:hover{
+    color: #F1EBBB;
+}
+
+.logo{
+    color: #F1EBBB;
+    position: relative;
+    bottom: 35px;
+}
+
+.text {
+    position: relative;
+    color: #707070;
+    bottom: 35px;
+    padding-left: 20px;
+}

@@ -1,0 +1,10 @@
+.footer {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    color: #F1EBBB;
+    position: static;
+    bottom: 0;
+    padding-bottom: -20px;
+    width:100%;
+    height: 80px;
+    background:#00ADB5;
+ }

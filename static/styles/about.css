@@ -1,0 +1,27 @@
+.div {
+    padding-bottom: 110px;
+    padding-top: 110px;
+    color: #F1EBBB;
+    text-align: center;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.box {
+    height: 255px;
+    border-radius: 18px;
+    margin-right: 33%;
+    margin-left: 33%;
+    align-self: center;
+    background-color: #393E46;
+}
+
+.up{
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    background-color: #00ADB5;
+    width: 100%;
+}
+
+p{
+    font-size: larger;
+}

@@ -1,0 +1,84 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+<head>
+    <link rel="stylesheet" href="{% static 'styles/login.css' %}">
+</head>
+
+<div class = "page">
+{% if page == 'login' %}
+
+<div class="login">
+    <div class="logo"><h1>Log in</h1></div>
+    <form method="POST" action="">
+        {% csrf_token %}
+        
+        <label class="tex">Username:</label>
+        <input class="place" type="text" name="username" placeholder="Enter Username">
+
+        <label class="tex">Password:</label>
+        <input class="place" type="password" name="password" placeholder="Enter Password">
+
+        <input class="log" type="submit" value="login">
+    </form>
+    <p class = "tx">Haven't signed up yet?</p>
+    <a class = "tx" href="{% url 'registration' %}">Sign up</a>
+</div>
+
+{% else %}
+
+<div class="login">
+    <form method="POST" action="">
+        <input type="hidden" name="csrfmiddlewaretoken" value="RqFWbGhSZJE0CKfl1rLc2BTfmqj0XoYybVxNjHwiRo7lMELHSOZhOVANzyWMNJSf">
+        <p>
+            <label class="helptext" for="id_username">Username:</label>
+            <input class="place" type="text" name="username" maxlength="150" autocapitalize="none" autocomplete="username" autofocus="" required="" id="id_username">
+            <span class="helptext">Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.</span>
+        </p>
+
+  
+        <p>
+            <label class="helptext" for="id_password1">Password:</label>
+            <input class="place" type="password" name="password1" autocomplete="new-password" required="" id="id_password1">
+            <span class="helptext"></span>
+        </p>
+      
+        <ul>
+            <li>
+            Your password can’t be too similar to your other personal information.
+            </li>
+            <li>
+            Your password must contain at least 8 characters.
+            </li>
+            <li>
+            Your password can’t be a commonly used password.
+            </li>
+            <li>
+            Your password can’t be entirely numeric.
+            </li>
+        </ul>
+
+         <p>
+            <label class="helptext" for="id_password2">Password confirmation:</label>
+            <input class="place" type="password" name="password2" autocomplete="new-password" required="" id="id_password2">
+            <span class="helptext">Enter the same password as before, for verification.</span>
+        </p>
+
+        <input class="log" type="submit" value="Register">
+    </form>
+    <p>Already have an account?</p>
+    <a href="{% url 'login' %}">Log in</a>
+</div>
+{% endif %}
+
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+
+{% endif %}
+</div>
+
+{% endblock content %}

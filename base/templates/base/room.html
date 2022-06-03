@@ -1,0 +1,36 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+<head>
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'styles/room.css' %}">
+</head>
+
+<div class="thread">
+    <h1 class="r">{{room.name}} by </h1>
+    <h2 class="r">{{room.host.username}}</h2>
+    <h2 class="r">{{room.decription}}</h2>
+    <h2 class="r">Comments</h2>
+    <hr>
+</div>
+
+{% if request.user.is_authenticated %}
+<div class="comment">
+    <form method="POST" action="" style="color: #F1EBBB;">
+        {% csrf_token %}
+        <input type="text" name="body" placeholder="Write your comment" class="inp">
+    </form>
+</div>
+{% endif %}
+
+<div class="comment-wrapper">
+    {% for message in comment_messages %}
+    <div class="comment">
+        <small>{{message.user}} {{message.created|timesince}} ago</small>   
+        <p>{{message.body}}</p>
+    </div>
+    {% endfor %}
+</div>
+
+
+{% endblock content %}

@@ -1,0 +1,46 @@
+.thread{
+    color: #F1EBBB;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.thread hr{
+    border-top: 3px solid #00ADB5;
+}
+
+.r{
+    text-align: center;
+}
+
+.comment-wrapper{
+    color: #F1EBBB;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.comment{
+    font-size: large;
+    padding: 1.5rem;
+    background-color: #393E46;
+    color: #F1EBBB;
+    margin-right: 45%;
+    margin-left: 10%;
+    margin-top: 10px;;
+    overflow-wrap: break-word;
+    border-radius: 18px;
+}
+
+.inp{
+    background-color: transparent;
+    padding: 1.5rem;
+    width: 90%;
+    color: #F1EBBB;
+    border-color: #00ADB5;
+    border-radius: 2px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: large;
+}
+
+::placeholder {
+    color: #F1EBBB;
+    opacity: 1; 
+    font-size: large;
+  }

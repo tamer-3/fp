@@ -1,0 +1,15 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+<head>
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'styles/room_form.css' %}">
+</head>
+
+<div class="div">
+    <form method="POST" action="" class="form">
+        {% csrf_token %}
+        <div class="form">{{ form.as_p }}</div>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+{% endblock content %}

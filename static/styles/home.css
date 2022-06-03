@@ -1,0 +1,59 @@
+.home-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    position: relative;
+    color: #F1EBBB;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+
+}
+
+.p{
+    margin: 0;
+    text-align: center;
+}
+
+.image{
+    width: 10px;
+    height: 10px;
+    padding-left: 300px;
+}
+
+.a {
+    padding-right: 250px;
+}
+
+.home-container a{
+    color: #F1EBBB;
+    text-decoration: double;
+}
+
+.home-container a:hover{
+    color: darksalmon;
+}
+
+
+.user-room {
+    text-align: center;
+    height: 130px;
+    background-color: #393E46;
+    margin-top: 30px;
+    border-radius: 18px;
+}
+
+.topics{
+    margin-left: 25%;
+    font-size: xx-large;
+    padding-top: 20px;
+}
+
+.search{
+    margin-left: 15%;
+    margin-top: 20%;
+    padding: 1.5rem;
+    background-color: transparent;
+    border-radius: 4px;
+    border-color: #00ADB5;
+    color: #F1EBBB;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 18px;
+}

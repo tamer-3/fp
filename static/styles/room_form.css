@@ -1,0 +1,18 @@
+.div {
+    border-radius: 18px;
+    padding: 3rem;
+    text-align: left;
+    margin-left: 30%;
+    margin-right: 30%;
+    background-color: #393E46;
+    color: #F1ebbb;
+    display: block;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    height: 100%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+.form {
+    align-self: center;
+}

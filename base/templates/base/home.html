@@ -1,0 +1,53 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+<head>
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'styles/home.css' %}">
+</head>
+
+<div class="home-container">
+
+    <div class="div">
+
+        <div class="topics">
+            <h3>Topics</h3>
+        </div>
+        <hr>
+
+        <div class="topics">
+            <a href="{% url 'home' %}" >All topics</a>
+        </div>
+
+        
+        {% for topic in topics %}
+        <div class="topics">
+            <a href="{% url 'home' %}?q={{topic.name}}" >{{topic.name}}</a>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div>
+        <h2 class="p"><a href="{% url 'create-room' %}">Create Thread</a> </h2>
+        
+        {% for room in rooms %}
+        <div class="user-room">
+            {% if request.user == room.host %}
+            <a class = 'a' href="{% url 'update-room' room.id %}">Edit thread</a>
+            {% endif %}
+            <span>{{room.host.username}}</span>
+            {% if request.user == room.host %}
+            <a href="{% url 'del-room' room.id %}"><img src="static\images\cross.png" class = 'image'></a>
+            {% endif %}
+            <h2><a href="{% url 'room' room.id %}">{{room.name}}</a></h2>   
+            <h3>About:{{room.topic.name}}</h3>  
+        </div>
+        {% endfor %}
+    </div>
+
+    <div>
+        <form method="GET" action="{% url 'home' %}" >
+            <input type="text" name="q" class="search" placeholder="search topic or thread name"/>
+        </form>
+    </div>
+</div>
+{% endblock content %}
